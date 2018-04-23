@@ -1,0 +1,40 @@
+#-------------------------------------------------------------------------------
+name        = cory
+
+cory_dir    = ..
+beh_dir     = $(cory_dir)/beh
+rtl_dir     = $(cory_dir)/rtl
+tb_dir      = $(cory_dir)/tb
+
+file        =
+timescale   = 1ns/1ns
+define      =
+
+file_list   += $(file)
+file_list   += $(tb_dir)/$(name).tb.v
+file_list   += $(rtl_dir)/$(name).v
+file_list   += +libext+.v
+file_list   += -y $(rtl_dir)
+file_list   += -y $(beh_dir)
+file_list   += +incdir+$(rtl_dir)
+file_list   += +incdir+$(beh_dir)
+file_list   += +incdir+$(tb_dir)
+file_list   += $(rtl_dir)/cory_all.v
+file_list   += $(beh_dir)/cory_all.v
+
+#-------------------------------------------------------------------------------
+wave_dir    = /home/user/waveform/cory
+
+option      = +licq_all  +ncaccess+rwc  +nctimescale+$(timescale) -sv +v2k
+option      += +define+SIM +define+CORY_MON
+option      += +define+WAVE_FILE=\"$(wave_dir)\"
+option      += $(define)
+
+#-------------------------------------------------------------------------------
+
+default:
+	ncverilog $(option) $(file_list)
+
+clean:
+	rm -rf ./INCA*
+	
