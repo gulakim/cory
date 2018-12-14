@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
-//  http://cafe.naver.com/corilog
-//  http://cory.blog.com
+//  http://github.com/gulakim/cory
+//  
 //------------------------------------------------------------------------------
 `ifndef CORY_ARB2_BANDWIDTH
     `define CORY_ARB2_BANDWIDTH

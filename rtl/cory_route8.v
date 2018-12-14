@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
-//  http://cafe.naver.com/corilog
-//  http://cory.blog.com
+//  http://github.com/gulakim/cory
+//  
 //------------------------------------------------------------------------------
 `ifndef CORY_ROUTE8
     `define CORY_ROUTE8

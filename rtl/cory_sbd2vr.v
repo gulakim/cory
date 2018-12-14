@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------
-//  http://cafe.naver.com/corilog
-//  http://cory.blog.com
+//  http://github.com/gulakim/cory
+//  
 //------------------------------------------------------------------------------
 `ifndef CORY_SBD2VR
     `define CORY_SBD2VR
